@@ -2,11 +2,9 @@
 using namespace std;
 void solution(int test){
     while(test--){
-        int x,y;
-        cin >> x >> y;
-        int product = x*y;
-        string s = to_string(product);
-        if(s[0]!='0' &&  s.size()==5){
+        int a,b,c;
+        cin >> a >> b >> c;
+        if(a!=b && b!=c && a!=c){
             cout << "YES" << endl;
         }
         else{

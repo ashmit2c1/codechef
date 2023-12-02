@@ -1,21 +1,22 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-int main() {
-	int test;
-	cin>> test;
-	while(test--)
-	{
-	    int n;
-	    cin>>n;
-	    if(n%2==0 && n%7==0){
-	    cout<<"Alice"<<endl;
-        }
-	    else if(n%2==1 && n%9==0){
-	    cout<<"Bob"<<endl;
-        }
-	    else{
-	    cout<<"Charlie"<<endl;
-        }
+void solution(int test){
+	while(test--){
+		int x;
+		cin >> x;
+		if(x%2==0 && x%7==0){
+			cout << "Alice" << endl;
+		}
+		else if(x%2!=0 && x%9==0){
+			cout << "Bob" << endl;
+		}
+		else{
+			cout << "Charlie" << endl;
+		}
 	}
-	return 0;
+}
+int main(){
+	int test;
+	cin >> test;
+	solution(test);
 }
