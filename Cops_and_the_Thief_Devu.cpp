@@ -59,40 +59,48 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 */
 #include<bits/stdc++.h>
 using namespace std;
-void solution(){
-	    int n;
-	    cin>>n;
-	    int x[n], y[n];
-	    
-	    for(int i = 0; i < n; i++){
-	        cin>>x[i];
-	    }
-	    
-	    for(int i = 0; i < n; i++){
-	        cin>>y[i];
-	    }
-	    
-	    int a = 9999;
-	    int t = 9999;
-	    int at = 99999;
-	    for(int i = 0; i < n; i++){
-	        if(y[i] == 1 && x[i] < a){
-	            a = x[i];
-	        } else if (y[i] == 2 && x[i] < t){
-	            t = x[i];
-	        } else if(y[i] == 3 && x[i] < at){ 
-	            at = x[i];
-	        }
-	    }
-	    
-	    
-	    if(a+t < at){
-	        cout<<a+t<<endl;
-	    } else {
-	        cout<<at<<endl;
-	    }
+void solution(int test){
+    while(test--){
+        int n,x,y;
+        cin >> n >> x >> y;
+        int c[n];
+        for(int i = 0; i<n ; i++){
+            cin >> c[i];
+        }
+        int houses_covered = x*y;
+        int right_range_covered = INT_MIN;
+        int left_range_covered = INT_MAX;
+        int right_range_covered_by_cop = 0;
+        int left_range_covered_by_cop = 0;
+        // for right hand side
+        for(int i = 0; i<n ; i++){
+            if(c[i]+houses_covered>=100){
+                right_range_covered_by_cop = 100;
+            }
+            else{ 
+                right_range_covered_by_cop = c[i]+houses_covered;
+            }
+            right_range_covered = max(right_range_covered,right_range_covered_by_cop);
+        }
+        int safe_from_right = 100-right_range_covered;
+        // for left hand side
+        for(int i = 0; i<n ; i++){
+            if(c[i]-houses_covered<=1){
+                left_range_covered_by_cop=1;
+            }
+            else{
+                left_range_covered_by_cop=c[i]-houses_covered;
+            }
+            left_range_covered = min(left_range_covered,left_range_covered_by_cop);
+        }
+        int safe_from_left = left_range_covered-1;
+        cout << safe_from_left+safe_from_right<< endl;
+    
+    }
 }
-int main(){
 
-    solution();
+int main(){
+    int test;
+    cin >> test;
+    solution(test);
 }
