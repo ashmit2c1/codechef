@@ -59,57 +59,20 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 */
 #include<bits/stdc++.h>
 using namespace std;
-void solution(int test){
-    while(test--){
-        int n;
-        cin >> n;
-        vector<int> a;
-        vector<int> b;
-        for(int i = 0; i<n ; i++){
-            int x;
-            cin >> x ;
-            a.push_back(x);
-        }
-        for(int i = 0; i<n ; i++){
-            int x;
-            cin >> x;
-            b.push_back(x);
-        }
-        int a_count=0;
-        int b_count=0;
-        int a_streak=0;
-        int b_streak=0;
-        for(int i = 0; i<n ; i++){
-            if(a[i]!=0){
-                a_count++;
-                a_streak = max(a_streak,a_count);
-            }
-            else{
-                a_count=0;
-            }
-        }
-        for(int i = 0; i<n ; i++){
-            if(b[i]!=0){
-                b_count++;
-                b_streak=max(b_streak,b_count);
-            }
-            else{
-                b_count=0;
-            }
-        }
-        if(a_streak>b_streak){
-            cout << "Om" << endl;
-        }
-        else if(a_streak==b_streak){
-            cout <<"Draw" << endl;
-        }
-        else{
-            cout <<"Addy" << endl;
-        }
+void solution(){
+    long long n;
+    cin >> n;
+    if(n>=1 && n<=50){
+        cout << 100 << endl;
+    }
+    else if(n>=51 && n <=100){
+        cout << 50 << endl;
+    }
+    else{
+        cout << 0 << endl;
     }
 }
 int main(){
-    int test;
-    cin >> test;
-    solution(test);
+
+    solution();
 }
