@@ -1,0 +1,1 @@
+{"name":"Local: rectangle","url":"/home/ashmit/code/codechef/rectangle.cpp","tests":[{"id":1706549196460,"input":"3\n1 1 2 2\n3 2 2 3\n1 2 2 2","output":"YES\nYES\nNO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/ashmit/code/codechef/rectangle.cpp","group":"local","local":true}
