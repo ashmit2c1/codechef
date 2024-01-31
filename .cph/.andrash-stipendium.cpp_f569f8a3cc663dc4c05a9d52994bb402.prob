@@ -1,0 +1,1 @@
+{"name":"Local: andrash-stipendium","url":"/home/ashmit/code/codechef/andrash-stipendium.cpp","tests":[{"id":1706721064382,"input":"2\n5\n3 5 4 4 3\n5\n3 4 4 4 5","output":"No\nYes"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/ashmit/code/codechef/andrash-stipendium.cpp","group":"local","local":true}
