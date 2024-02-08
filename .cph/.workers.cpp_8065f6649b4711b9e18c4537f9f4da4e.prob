@@ -1,0 +1,1 @@
+{"name":"Local: workers","url":"/home/ashmit/code/codechef/workers.cpp","tests":[{"id":1707387215584,"input":"5\n1 3 4 6 8\n1 2 1 2 3","output":"4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/ashmit/code/codechef/workers.cpp","group":"local","local":true}
