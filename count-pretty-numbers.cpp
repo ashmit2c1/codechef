@@ -61,18 +61,16 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 using namespace std;
 void solution(int test){
     while(test--){
-        int n;
-        cin >> n;
-        int count1=0;
-        for(int i = 0; i<n ; i++){
-            string s;
-            cin >> s;
-            if(s=="START38"){
-                count1++;
+        int l;
+        int r;
+        cin >> l >> r;
+        int count=0;
+        for ( int i = l; i<=r ; i++){
+            if(i%10==2||i%10==3||i%10==9){
+                count++;
             }
         }
-        int count2 = n - count1;
-        cout << count1 << " " << count2 << "\n";
+        cout << count << "\n";
     }
 }
 int main(){

@@ -61,18 +61,21 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 using namespace std;
 void solution(int test){
     while(test--){
-        int n;
-        cin >> n;
-        int count1=0;
+        int n,k;
+        cin >> n >> k;
+        vector<int> v;
         for(int i = 0; i<n ; i++){
-            string s;
-            cin >> s;
-            if(s=="START38"){
-                count1++;
+            int x;
+            cin >> x;
+            v.push_back(x);
+        }
+        int count=0;
+        for(int i = 0; i<n ; i++){
+            if(v[i]>k){
+                count++;
             }
         }
-        int count2 = n - count1;
-        cout << count1 << " " << count2 << "\n";
+        cout << count << "\n";
     }
 }
 int main(){

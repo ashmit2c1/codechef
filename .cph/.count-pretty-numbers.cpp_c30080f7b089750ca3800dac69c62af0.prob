@@ -1,0 +1,1 @@
+{"name":"Local: count-pretty-numbers","url":"/home/ashmit/code/codechef/count-pretty-numbers.cpp","tests":[{"id":1707493267737,"input":"2\n1 10\n11 33","output":"3\n8"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/ashmit/code/codechef/count-pretty-numbers.cpp","group":"local","local":true}
