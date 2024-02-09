@@ -1,0 +1,1 @@
+{"name":"Local: playing-with-strings","url":"/home/ashmit/code/codechef/playing-with-strings.cpp","tests":[{"id":1707405207546,"input":"2\n5\n11000\n01001\n3\n110\n001","output":"YES\nNO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/ashmit/code/codechef/playing-with-strings.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: chef-and-dolls","url":"/home/ashmit/code/codechef/chef-and-dolls.cpp","tests":[{"id":1707389092403,"input":"1\n3\n1 \n2\n1","output":"2"},{"id":1707389097779,"input":"1\n5\n1\n1\n2\n2\n3","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/ashmit/code/codechef/chef-and-dolls.cpp","group":"local","local":true}
