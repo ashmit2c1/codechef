@@ -59,31 +59,29 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 */
 #include<bits/stdc++.h>
 using namespace std;
-void solution(){
-int n;
-		cin >> n;
-		vector<int> v;
-		for(int i = 0; i<n ; i++){
-			int x;
-			cin >> x;
-			v.push_back(x);
-		}
-		int evenCount=0;
-		for(int i = 0; i<n ; i++){
-			if(v[i]%2==0){
-				evenCount++;
-			}
-		}
-		int oddCount = n-evenCount;
-		if(oddCount>=evenCount){
-			cout << "NOT READY" << "\n";
-		}
-		else{
-			cout << "READY FOR BATTLE" << "\n";
-		}
+void solution(int test){
+    while(test--){
+        vector<int> v;
+        for(int i = 0; i<4 ; i++){
+            int x;
+            cin >>x;
+            v.push_back(x);
+        }
+        int sum=0;
+        for(int i = 0; i<4 ; i++){
+            sum+=v[i];
+        }
+        if(sum>0){
+            cout << "OUT" << "\n";
+        }
+        else{
+            cout << "IN" << "\n";
+        }
 
+    }
 }
 int main(){
-
-	solution();
+    int test;
+    cin >> test;
+    solution(test);
 }
