@@ -1,0 +1,1 @@
+{"name":"Local: mario-and-broken","url":"/home/ashmit/code/codechef/mario-and-broken.cpp","tests":[{"id":1707558856491,"input":"4\n6\nabcabc\n6\nabcdef\n4\naaaa\n4\nbaab","output":"YES\nNO\nYES\nNO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/ashmit/code/codechef/mario-and-broken.cpp","group":"local","local":true}
