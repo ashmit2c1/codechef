@@ -61,13 +61,16 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 using namespace std;
 void solution(int test){
     while(test--){
-        int a,b,c,d;
-        cin >> a >> b >> c >> d;
-        if(a>c || b>d){
-            cout << "IMPOSSIBLE" << "\n";
+        int x,y;
+        cin >> x >> y;
+        if(x>y){
+            cout << "CAR" << "\n";
+        }
+        else if(y>x){
+            cout << "BIKE" << "\n";
         }
         else{
-            cout << "POSSIBLE" << "\n";
+            cout << "SAME" << "\n";
         }
 
     }

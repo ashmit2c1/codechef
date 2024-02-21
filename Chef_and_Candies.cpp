@@ -61,13 +61,20 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 using namespace std;
 void solution(int test){
     while(test--){
-        int a,b,c,d;
-        cin >> a >> b >> c >> d;
-        if(a>c || b>d){
-            cout << "IMPOSSIBLE" << "\n";
+        int n;
+        int x;
+        cin >> n >> x;
+        if(x>n){
+            cout << 0 << "\n";
         }
         else{
-            cout << "POSSIBLE" << "\n";
+            int diff = n-x;
+            if(diff%4==0){
+                cout << diff/4 << "\n";
+            }
+            else{
+                cout << diff/4 + 1 << "\n";
+            }
         }
 
     }
