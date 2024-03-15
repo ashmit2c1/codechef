@@ -59,23 +59,16 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 */
 #include<bits/stdc++.h>
 using namespace std;
-void solution(int test){
-    while(test--){
-                int n;
-        int m;
-        cin >> n >> m;
-        int total_shoes = 2*n;
-        if(n<m){
-            cout << n << endl;
-        }
-        else 
-        {
-            cout << total_shoes-m << endl;
-        }
-    }
+void solution(){
+    int x;
+    int y;
+    cin >> x >> y;
+    int rem = x-y;
+    int time = rem + (y/2);
+    cout << time << "\n";
+
 }
 int main(){
-    int test;
-    cin >> test;
-    solution(test);
+
+    solution();
 }

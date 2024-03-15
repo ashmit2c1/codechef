@@ -61,17 +61,12 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 using namespace std;
 void solution(int test){
     while(test--){
-                int n;
-        int m;
-        cin >> n >> m;
-        int total_shoes = 2*n;
-        if(n<m){
-            cout << n << endl;
-        }
-        else 
-        {
-            cout << total_shoes-m << endl;
-        }
+        int a,b,c,d;
+        cin >> a >> b >> c >> d;
+        int max1 = max(a,b);
+        int max2 = max(c,d);
+        cout << max1 + max2 << "\n";
+
     }
 }
 int main(){

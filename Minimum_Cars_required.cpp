@@ -61,17 +61,15 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 using namespace std;
 void solution(int test){
     while(test--){
-                int n;
-        int m;
-        cin >> n >> m;
-        int total_shoes = 2*n;
-        if(n<m){
-            cout << n << endl;
+        int x;
+        cin >> x;
+        if(x%4==0){
+            cout << x/4 << "\n";
         }
-        else 
-        {
-            cout << total_shoes-m << endl;
+        else{
+            cout << x/4 + 1 << "\n";
         }
+
     }
 }
 int main(){
