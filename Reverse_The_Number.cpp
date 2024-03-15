@@ -61,15 +61,18 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 using namespace std;
 void solution(int test){
     while(test--){
-        int a,b,c,d;
-        cin >> a >> b >> c >> d;
-        if((a>b+c+d) || (b>c+d+a) || (c>a+b+d) || (d>a+b+c)){
-            cout<< "YES"<<"\n";
-        }
-        else{
-            cout << "NO" << "\n";
-        }
-
+        string s;
+        cin >> s;
+        int n = s.length();
+        int start = 0;
+        int end = n-1;
+        while(start<end){
+            swap(s[start],s[end]);
+            start++;
+            end--;
+        }    
+        int ans = stoi(s);
+        cout << ans << "\n";
 
     }
 }

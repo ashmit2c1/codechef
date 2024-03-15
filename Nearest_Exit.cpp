@@ -61,16 +61,14 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 using namespace std;
 void solution(int test){
     while(test--){
-        int a,b,c,d;
-        cin >> a >> b >> c >> d;
-        if((a>b+c+d) || (b>c+d+a) || (c>a+b+d) || (d>a+b+c)){
-            cout<< "YES"<<"\n";
+        int x;
+        cin >> x;
+        if(x<=50){
+            cout << "LEFT" << "\n";
         }
         else{
-            cout << "NO" << "\n";
+            cout << "RIGHT" << "\n";
         }
-
-
     }
 }
 int main(){

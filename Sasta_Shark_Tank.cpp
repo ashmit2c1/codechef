@@ -61,15 +61,19 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 using namespace std;
 void solution(int test){
     while(test--){
-        int a,b,c,d;
-        cin >> a >> b >> c >> d;
-        if((a>b+c+d) || (b>c+d+a) || (c>a+b+d) || (d>a+b+c)){
-            cout<< "YES"<<"\n";
+        int a,b;
+        cin >> a >> b;
+        int val1 = a*10;
+        int val2 = b*5;
+        if(val1>val2){
+            cout << "FIRST" << "\n";
+        }
+        else if(val1==val2){
+            cout << "ANY" << "\n";
         }
         else{
-            cout << "NO" << "\n";
+            cout << "SECOND" << "\n";
         }
-
 
     }
 }
