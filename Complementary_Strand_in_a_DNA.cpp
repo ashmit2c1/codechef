@@ -61,14 +61,25 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 using namespace std;
 void solution(int test){
     while(test--){
-        int x;
-        cin >> x;
-        cpp_int ans=1;
-        for(int i = 1; i<=x ; i++){
-            ans=ans*i;
+        int n;
+        cin >> n;
+        string a;
+        cin >> a;
+        for(int i = 0; i<n ; i++){
+            if(a[i]=='A'){
+                cout << "T";
+            }
+            else if(a[i]=='T'){
+                cout << "A";
+            }
+            else if(a[i]=='C'){
+                cout << "G";
+            }
+            else if(a[i]=='G'){
+                cout << "C";
+            }
         }
-        cout << ans << "\n";
-
+        cout << "\n";
     }
 }
 int main(){

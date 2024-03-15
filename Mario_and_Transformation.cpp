@@ -63,12 +63,16 @@ void solution(int test){
     while(test--){
         int x;
         cin >> x;
-        cpp_int ans=1;
-        for(int i = 1; i<=x ; i++){
-            ans=ans*i;
+        if(x%3==0){
+            cout << "NORMAL" << "\n";
         }
-        cout << ans << "\n";
-
+        else if(x%3==1){
+            cout << "HUGE" << "\n";
+        }
+        else{
+            cout <<"SMALL" << "\n";
+        }
+        
     }
 }
 int main(){

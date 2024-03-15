@@ -61,13 +61,16 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 using namespace std;
 void solution(int test){
     while(test--){
-        int x;
-        cin >> x;
-        cpp_int ans=1;
-        for(int i = 1; i<=x ; i++){
-            ans=ans*i;
+        int x,y,z;
+        cin >> x >> y >> z;
+        int time = y/x;
+        int elapsed = z-time;
+        if(elapsed>0){
+            cout << elapsed << "\n";
         }
-        cout << ans << "\n";
+        else{
+            cout << 0 << "\n";
+        }
 
     }
 }

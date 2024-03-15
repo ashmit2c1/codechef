@@ -61,13 +61,22 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 using namespace std;
 void solution(int test){
     while(test--){
-        int x;
-        cin >> x;
-        cpp_int ans=1;
-        for(int i = 1; i<=x ; i++){
-            ans=ans*i;
+        int x,y;
+        cin >> x >> y;
+        int diff = y-x;
+        int min = diff/8;
+        if(diff==0){
+            cout << 0 << "\n";
         }
-        cout << ans << "\n";
+        else if(diff<8){
+            cout << 1 << "\n";
+        }
+        else if(diff%8==0){
+            cout << diff/8 << "\n";
+        }
+        else{
+            cout << diff/8 + 1 << "\n";
+        }
 
     }
 }
