@@ -61,18 +61,14 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 using namespace std;
 void solution(int test){
     while(test--){
-        int n; // number of levels 
-        int x; // time taken to complete each level
-        int z; // break time 
-        cin >> n >> x >> z;
-        if(n%3==0 && n>3){
-            cout << (n*x)+(((n/3)-1))*z << endl;
-        }
-        else if (n%3!=0 && n>3){
-            cout << (n*x)+(((n/3)))*z << endl;
+        int x,y,z;
+        cin >> x >> y >> z;
+        int totalCandies=y*z;
+        if(x%totalCandies==0){
+            cout << x/totalCandies << "\n";
         }
         else{
-            cout << n*x << endl;
+            cout << (x/totalCandies)+1 << "\n";
         }
 
     }
