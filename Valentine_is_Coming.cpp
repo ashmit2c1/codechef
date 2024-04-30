@@ -64,14 +64,14 @@ void solution(int test){
         int x;
         int y;
         cin >> x >> y;
-        if(x>y){
-            cout << x/y + (x%y) << "\n";
+        if(y>x){
+            cout << 0 << "\n";
         }
-        else if(x==y){
+        else if(y==x){
             cout << 1 << "\n";
         }
         else{
-            cout << x << "\n";
+            cout << x/y << "\n";
         }
 
     }

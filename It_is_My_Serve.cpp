@@ -63,15 +63,14 @@ void solution(int test){
     while(test--){
         int x;
         int y;
-        cin >> x >> y;
-        if(x>y){
-            cout << x/y + (x%y) << "\n";
-        }
-        else if(x==y){
-            cout << 1 << "\n";
+        cin >>x>>y;
+        int sum = x+y;
+        int rem = (x+y)%4;
+        if(rem==0 || rem==1){
+            cout << "Alice" << "\n";
         }
         else{
-            cout << x << "\n";
+            cout << "Bob" << "\n";
         }
 
     }
