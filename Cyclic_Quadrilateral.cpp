@@ -61,21 +61,16 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 using namespace std;
 void solution(int test){
     while(test--){
-        int n;
-        cin >> n;
-        vector<int> v;
-        for(int i = 0; i<n ; i++){
-            int x;
-            cin >> x;
-            v.push_back(x);
+        int a,b,c,d;
+        cin >> a >> b >> c >> d;
+        int opp1 = a+c;
+        int opp2 = b+d;
+        if(opp1 == 180 && opp2==180){
+            cout << "YES" << "\n";
         }
-        int count=0;
-        for(int i = 0; i<n ; i++){
-            if(v[i]>=10 && v[i]<=60){
-                count++;
-            }
+        else{
+            cout << "NO" << "\n";
         }
-        cout << count << "\n";
 
     }
 }

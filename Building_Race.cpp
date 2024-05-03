@@ -61,21 +61,20 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 using namespace std;
 void solution(int test){
     while(test--){
-        int n;
-        cin >> n;
-        vector<int> v;
-        for(int i = 0; i<n ; i++){
-            int x;
-            cin >> x;
-            v.push_back(x);
+        float a,b,x,y;
+        cin >> a >> b >> x >> y;
+        float speedChef = a/x;
+        float speedChefina = b/y;
+        if(speedChef>speedChefina){
+            cout << "Chefina" << "\n";
         }
-        int count=0;
-        for(int i = 0; i<n ; i++){
-            if(v[i]>=10 && v[i]<=60){
-                count++;
-            }
+        else if(speedChef==speedChefina){
+            cout << "Both" << "\n";
         }
-        cout << count << "\n";
+        else{
+            cout << "Chef" << "\n";
+        }
+
 
     }
 }

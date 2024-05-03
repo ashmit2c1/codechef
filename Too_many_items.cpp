@@ -61,22 +61,14 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 using namespace std;
 void solution(int test){
     while(test--){
-        int n;
-        cin >> n;
-        vector<int> v;
-        for(int i = 0; i<n ; i++){
-            int x;
-            cin >> x;
-            v.push_back(x);
+        int x;
+        cin >> x;
+        if(x%10==0){
+            cout << x/10 << "\n";
         }
-        int count=0;
-        for(int i = 0; i<n ; i++){
-            if(v[i]>=10 && v[i]<=60){
-                count++;
-            }
+        else{
+            cout << x/10 + 1 << "\n";
         }
-        cout << count << "\n";
-
     }
 }
 int main(){

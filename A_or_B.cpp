@@ -61,22 +61,30 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 using namespace std;
 void solution(int test){
     while(test--){
-        int n;
-        cin >> n;
-        vector<int> v;
-        for(int i = 0; i<n ; i++){
-            int x;
-            cin >> x;
-            v.push_back(x);
+        int x;
+        int y;
+        cin >> x >> y;
+        int a=500;
+        int b=1000;
+        // case 1 when chef solves A first
+        for(int i=0;i<x;i++){
+            a=a-2;
         }
-        int count=0;
-        for(int i = 0; i<n ; i++){
-            if(v[i]>=10 && v[i]<=60){
-                count++;
-            }
+        for(int i=0;i<(x+y);i++){
+            b=b-4;
         }
-        cout << count << "\n";
-
+        int totalCase1 = a+b;
+        // case 2 when chef solves B first
+        int a2=500;
+        int b2=1000;
+        for(int i=0;i<y;i++){
+            b2=b2-4;
+        }
+        for(int i=0;i<(x+y);i++){
+            a2=a2-2;
+        }
+        int totalCase2 = a2+b2;
+        cout << max(totalCase1,totalCase2) << "\n";
     }
 }
 int main(){

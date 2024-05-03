@@ -61,21 +61,24 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 using namespace std;
 void solution(int test){
     while(test--){
-        int n;
-        cin >> n;
-        vector<int> v;
-        for(int i = 0; i<n ; i++){
-            int x;
-            cin >> x;
-            v.push_back(x);
+        int x,y;
+        cin >>x >> y;
+        int absFloorX;
+        if(x%10==0){
+            absFloorX = x/10;
         }
-        int count=0;
-        for(int i = 0; i<n ; i++){
-            if(v[i]>=10 && v[i]<=60){
-                count++;
-            }
+        else{
+            absFloorX=(x/10)+1;
         }
-        cout << count << "\n";
+        int absFloorY;
+        if(y%10==0){
+            absFloorY=y/10;
+        }
+        else{
+            absFloorY=(y/10)+1;
+        }
+        int diff = abs(absFloorX-absFloorY);
+        cout << diff << "\n";
 
     }
 }

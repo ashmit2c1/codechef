@@ -61,22 +61,19 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 using namespace std;
 void solution(int test){
     while(test--){
-        int n;
-        cin >> n;
-        vector<int> v;
-        for(int i = 0; i<n ; i++){
-            int x;
-            cin >> x;
-            v.push_back(x);
+        float a,x,b,y;
+        cin >> a >> x >> b >> y;
+        float speedAlice = a/x;
+        float speedBob = b/y;
+        if(speedAlice>speedBob){
+            cout << "Alice" << "\n";
         }
-        int count=0;
-        for(int i = 0; i<n ; i++){
-            if(v[i]>=10 && v[i]<=60){
-                count++;
-            }
+        else if(speedAlice==speedBob){
+            cout << "Equal" << "\n";
         }
-        cout << count << "\n";
-
+        else{
+            cout << "Bob" << "\n";
+        }
     }
 }
 int main(){
