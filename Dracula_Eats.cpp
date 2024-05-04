@@ -63,11 +63,15 @@ void solution(int test){
     while(test--){
         int n;
         cin >> n;
-        int fact=1;
-        for(int i=1;i<=n;i++){
-            fact = fact * i;
+        if(n==1){
+            cout << 0 << "\n";
         }
-        cout << fact << "\n";
+        else{
+            int rem=n-2;
+            int num = rem / 7;
+            cout << 1 + num << "\n";
+        }
+
     }
 }
 int main(){

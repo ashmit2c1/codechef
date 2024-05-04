@@ -59,19 +59,21 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 */
 #include<bits/stdc++.h>
 using namespace std;
-void solution(int test){
-    while(test--){
-        int n;
-        cin >> n;
-        int fact=1;
-        for(int i=1;i<=n;i++){
-            fact = fact * i;
-        }
-        cout << fact << "\n";
+void solution(){
+    int r,o,c;
+    cin >> r >> o >> c;
+    int oversLeft = 20-o;
+    int ballsLeft = 6*oversLeft;
+    int runsMax = 6*ballsLeft;
+    int maxScore = c+runsMax;
+    if(maxScore>r){
+        cout << "YES" <<"\n";
+    }
+    else{
+        cout << "NO" << "\n";
     }
 }
 int main(){
-    int test;
-    cin >> test;
-    solution(test);
+
+    solution();
 }

@@ -61,13 +61,25 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 using namespace std;
 void solution(int test){
     while(test--){
-        int n;
-        cin >> n;
-        int fact=1;
-        for(int i=1;i<=n;i++){
-            fact = fact * i;
+        int x,y,k;
+        cin >> x >> y >> k;
+        int diff = abs(x-y);
+        if(diff==0){
+            cout << 0 << "\n";
         }
-        cout << fact << "\n";
+        else{
+            if(diff<k){
+                cout << 1 << "\n";
+            }
+            else{
+                if(diff%k==0){
+                    cout << diff/k << "\n";
+                }
+                else{
+                    cout << diff/k +1 << "\n";
+                }
+            }
+        }
     }
 }
 int main(){

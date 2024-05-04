@@ -61,13 +61,12 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 using namespace std;
 void solution(int test){
     while(test--){
-        int n;
-        cin >> n;
-        int fact=1;
-        for(int i=1;i<=n;i++){
-            fact = fact * i;
-        }
-        cout << fact << "\n";
+        int a,b,c;
+        cin >> a >> b >> c;
+        int total = a+b+c;
+        int free = min(a,min(b,c));
+        cout << total-free << "\n";
+
     }
 }
 int main(){

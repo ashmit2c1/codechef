@@ -61,13 +61,24 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 using namespace std;
 void solution(int test){
     while(test--){
-        int n;
-        cin >> n;
-        int fact=1;
-        for(int i=1;i<=n;i++){
-            fact = fact * i;
+        int n, k;
+        cin >> n >> k;
+
+        int arr[n];
+
+        for (int i = 0; i < n; i++) {
+            cin >> arr[i];
         }
-        cout << fact << "\n";
+
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            arr[i] += k;
+
+            if (arr[i] % 7 == 0) {
+                count++;
+            }
+        }
+        cout << count << endl;
     }
 }
 int main(){

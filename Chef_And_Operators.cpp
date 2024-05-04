@@ -61,13 +61,18 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 using namespace std;
 void solution(int test){
     while(test--){
-        int n;
-        cin >> n;
-        int fact=1;
-        for(int i=1;i<=n;i++){
-            fact = fact * i;
+        int a,b;
+        cin >> a >> b;
+        if(a>b){
+            cout << ">" << "\n";
         }
-        cout << fact << "\n";
+        else if(a==b){
+            cout << "=" << "\n";
+        }
+        else{
+            cout << "<" <<"\n";
+        }
+
     }
 }
 int main(){

@@ -63,11 +63,29 @@ void solution(int test){
     while(test--){
         int n;
         cin >> n;
-        int fact=1;
-        for(int i=1;i<=n;i++){
-            fact = fact * i;
+        vector<int> v;
+        for(int i = 0; i<n ; i++){
+            int x;
+            cin >> x;
+            v.push_back(x);
         }
-        cout << fact << "\n";
+        int countPos=0;
+        int countNeg=0;
+        for(int i = 0; i<n ; i++){
+            if(v[i]==1){
+                countPos++;
+            }
+            if(v[i]==-1){
+                countNeg++;
+            }
+        }
+        if(n%2==1){
+            cout << -1 << "\n";
+        }
+        else{
+            cout << abs(countPos-countNeg)/2 << "\n";
+        }
+
     }
 }
 int main(){
