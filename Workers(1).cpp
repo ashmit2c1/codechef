@@ -59,39 +59,40 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 */
 #include<bits/stdc++.h>
 using namespace std;
-void solution(int test){
-    while(test--){
-        int n;
-        cin >> n;
-        vector<int> a;
-        vector<int> b;
-        for(int i = 0; i<n ; i++){
-            int x;
-            cin >> x;
-            a.push_back(x);
-        }
-        for(int i = 0; i<n ; i++){
-            int x;
-            cin >> x;
-            b.push_back(x);
-        }
-        int count=0;
-        int streak = 0;
-        for(int i = 0; i<n ; i++){
-            if(a[i]>0 && b[i]>0){
-                count++;
-                streak = max(streak,count);
-            }
-            else{
-                count=0;
-            }
-        }
-        cout << streak << "\n";
-
-    }
+void solution(){
+	    int n;
+	    cin>>n;
+	    int x[n], y[n];
+	    
+	    for(int i = 0; i < n; i++){
+	        cin>>x[i];
+	    }
+	    
+	    for(int i = 0; i < n; i++){
+	        cin>>y[i];
+	    }
+	    
+	    int a = 9999;
+	    int t = 9999;
+	    int at = 99999;
+	    for(int i = 0; i < n; i++){
+	        if(y[i] == 1 && x[i] < a){
+	            a = x[i];
+	        } else if (y[i] == 2 && x[i] < t){
+	            t = x[i];
+	        } else if(y[i] == 3 && x[i] < at){ 
+	            at = x[i];
+	        }
+	    }
+	    
+	    
+	    if(a+t < at){
+	        cout<<a+t<<endl;
+	    } else {
+	        cout<<at<<endl;
+	    }
 }
 int main(){
-    int test;
-    cin >> test;
-    solution(test);
+
+    solution();
 }

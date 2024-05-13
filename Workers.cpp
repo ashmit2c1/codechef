@@ -59,40 +59,47 @@ GGPP5555YYY55?~::^^^^!!~~~~~~~~~~~~~~~!777?JPBBBBBBBBBBBBBBBBBBBBBBGGGGBBBBB#&&&
 */
 #include<bits/stdc++.h>
 using namespace std;
-void solution(){
-	    int n;
-	    cin>>n;
-	    int x[n], y[n];
-	    
-	    for(int i = 0; i < n; i++){
-	        cin>>x[i];
-	    }
-	    
-	    for(int i = 0; i < n; i++){
-	        cin>>y[i];
-	    }
-	    
-	    int a = 9999;
-	    int t = 9999;
-	    int at = 99999;
-	    for(int i = 0; i < n; i++){
-	        if(y[i] == 1 && x[i] < a){
-	            a = x[i];
-	        } else if (y[i] == 2 && x[i] < t){
-	            t = x[i];
-	        } else if(y[i] == 3 && x[i] < at){ 
-	            at = x[i];
-	        }
-	    }
-	    
-	    
-	    if(a+t < at){
-	        cout<<a+t<<endl;
-	    } else {
-	        cout<<at<<endl;
-	    }
+void solution(int test){
+    while(test--){
+        int n;
+        cin >> n;
+        vector<int> price;
+        vector<int> workertype;
+        for(int i = 0; i<n ; i++){
+            int x;
+            cin >> x;
+            price.push_back(x);
+        }
+        for(int i = 0; i<n ; i++){
+            int x;
+            cin >> x;
+            workertype.push_back(x);
+        }
+        int expense1=100001;
+        int expense2=100001;
+        int expense3=100001;
+        for(int i = 0; i<n ; i++){
+            if(workertype[i]==1 && price[i]<expense1){
+                expense1=price[i];
+            }
+            else if(workertype[i]==2 && price[i]<expense2){
+                expense2=price[i];
+            }
+            else if(workertype[i]==1 && price[i]<expense3){
+                expense3=price[i];
+            }
+        }
+        int total = expense1+expense2;
+        if(total<expense3){
+            cout << total << "\n";
+        }
+        else{
+            cout << expense3 << "\n";
+        }
+    }
 }
 int main(){
-
-    solution();
+    int test;
+    cin >> test;
+    solution(test);
 }

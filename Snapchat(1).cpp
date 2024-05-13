@@ -78,16 +78,16 @@ void solution(int test){
         int count=0;
         int streak = 0;
         for(int i = 0; i<n ; i++){
-            if(a[i]>0 && b[i]>0){
-                count++;
+            if(a[i]==0 || b[i]==0){
                 streak = max(streak,count);
+                count = 0;
             }
             else{
-                count=0;
+                count++;
             }
         }
-        cout << streak << "\n";
-
+        streak = max(streak,count);
+        cout << streak << endl;
     }
 }
 int main(){
