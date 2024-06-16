@@ -2,7 +2,7 @@
 using namespace std;
 void solution(int test){
     while(test--){
-        int n ;
+        int n;
         cin >> n;
         vector<int> v;
         for(int i = 0; i<n ; i++){
@@ -10,16 +10,20 @@ void solution(int test){
             cin >> x;
             v.push_back(x);
         }
-        set<int> st;
-        for(int i = 0; i<n ; i++){
-            if(v[i]>=1 && v[i]<=7){
-                st.insert(v[i]);
+        sort(v.begin(),v.end());
+        int occ = 1;
+        int maxOcc =1 ;
+        for(int i = 0; i<n-1 ; i++){
+            if(v[i]==v[i+1]){
+                occ++;
+                maxOcc=max(maxOcc,occ);
             }
-            if(st.size()==7){
-                cout << i+1 << "\n";
-                break;
+            else{
+                occ=1;
             }
         }
+        int ans = n-maxOcc;
+        cout << ans << "\n";
 
     }
 }

@@ -2,7 +2,7 @@
 using namespace std;
 void solution(int test){
     while(test--){
-        int n ;
+        int n;
         cin >> n;
         vector<int> v;
         for(int i = 0; i<n ; i++){
@@ -12,13 +12,15 @@ void solution(int test){
         }
         set<int> st;
         for(int i = 0; i<n ; i++){
-            if(v[i]>=1 && v[i]<=7){
-                st.insert(v[i]);
-            }
-            if(st.size()==7){
-                cout << i+1 << "\n";
-                break;
-            }
+            st.insert(v[i]);
+        }
+        int setSize = st.size();
+        int diff = n-setSize;
+        if(diff==0){
+            cout << n << "\n";
+        }
+        else{
+            cout << setSize << "\n";
         }
 
     }
