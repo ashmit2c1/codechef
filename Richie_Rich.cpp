@@ -1,15 +1,17 @@
 #include<bits/stdc++.h>
 using namespace std;
+#define ll long long
+#define forloop(x,y) for(int i=x;i<y;i++)
+#define secondfor(x,y) for(int j=x;j<y;j++)
+#define print(x) cout << x << "\n";
 void solution(int test){
     while(test--){
-        int a,b,x;
-        cin >> a >> b >> x;
-        int cnt=0;
-        while(a<=b){
-            a+=x;
-            cnt++;
+        ll a;ll x;ll b;cin >> a >> b >> x;
+        ll cnt=0;
+        while(a<b){
+            a+=x;cnt++;
         }
-        cout << cnt-1 << "\n";
+        print(cnt)
 
     }
 }
