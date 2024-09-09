@@ -10,17 +10,21 @@ using namespace std;
 
 void solution(int test){
     while(test--){
-        vector<lint>arr;
-        forloop(0,3){lint x;cin >> x;arr.push_back(x);}
-        lint index=4;
-        forloop(0,arr.size()){
-            if(arr[i]>50){index=i;}
+        string s1;string s2;
+        cin >> s1 >> s2;
+        lint max=0;lint min=0;
+        forloop(0,s1.size()){
+            if (s1[i] != '?' && s2[i] != '?' && s1[i] != s2[i]) {
+                max++; min++;
+            }
+            else if ((s1[i] != '?' && s2[i] == '?') || (s1[i] == '?' && s2[i] != '?')) {
+                max++;
+            }
+            else if (s1[i] == '?' && s2[i] == '?') {
+                max++;
+            }
         }
-        if(index==4){print("NOTA")}
-        else if(index==0){print("A")}
-        else if(index==1){print("B")}
-        else{print("C")}
-
+        cout << min << " " << max << "\n";
     }
 }
 int main(){
