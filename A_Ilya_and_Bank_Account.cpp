@@ -13,17 +13,17 @@ using namespace std;
 #define lintmin LLONG_MIN
 #define mp(x,y) make_pair(x,y)
 
-void solution(int test){
-    while(test--){
-        lint a,b,c,d,e;
-        cin >> a >> b >> c >>d>>e;
-        if(((a+b)<=d && c<=e)||((a+c)<=d && b<=e)||((b+c)<=d && a<=e)){print("YES")}
-        else{print("NO")}
+void solution(){
+    lint balance;
+    cin >> balance;
+    lint maxvalue=balance;
+    lint withoutLast=balance/10;
+    lint withLast=(balance/100)*10 + (balance%10);
+    lint betterOption = max(withLast,withoutLast);
+    print(max(maxvalue,betterOption))
 
-    }
 }
 int main(){
-    int test;
-    cin >> test;
-    solution(test);
+
+    solution();
 }

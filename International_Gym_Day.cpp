@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-#define lint long long
+#define lint double
 #define forloop(x,y) for(int i=x;i<y;i++)
 #define secondfor(x,y) for(int j=x;j<y;j++)
 #define print(x) cout << x << "\n";
@@ -12,13 +12,23 @@ using namespace std;
 #define lintmax LLONG_MAX
 #define lintmin LLONG_MIN
 #define mp(x,y) make_pair(x,y)
-
+int findAns(lint d,lint x,lint y){
+    if(x<=y){return 0;}
+    lint cnt=-1;
+    forloop(0,y){
+        lint disc = i*d;
+        if(disc>=100){disc=100;}
+        lint price = x-(x*disc)/100;
+        if(price<=y-i){cnt=i;break;}
+    }
+    return cnt;
+}
 void solution(int test){
     while(test--){
-        lint a,b,c,d,e;
-        cin >> a >> b >> c >>d>>e;
-        if(((a+b)<=d && c<=e)||((a+c)<=d && b<=e)||((b+c)<=d && a<=e)){print("YES")}
-        else{print("NO")}
+        lint x;lint y;lint d;
+        cin >> d >> x >> y;
+        int ans=findAns(d,x,y);
+        print(ans)
 
     }
 }

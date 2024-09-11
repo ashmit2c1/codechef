@@ -13,13 +13,32 @@ using namespace std;
 #define lintmin LLONG_MIN
 #define mp(x,y) make_pair(x,y)
 
+
+lint findCount(string s){
+    lint n=s.size();
+    lint cnt0=0;
+    forloop(0,n){
+        if(s[i]=='0'){cnt0++;}
+    }
+    lint cnt1=n-cnt0;
+    lint cnt=0;
+    lint minVal=min(cnt1,cnt0);
+    lint maxVal = max(cnt1,cnt0);
+    forloop(1,n+1){
+        if((i>=cnt1 && (i-cnt1)%2==0)&&(i>=cnt0 && (i-cnt0)%2==0)){cnt++;}
+    }
+    return cnt;
+
+}
+
 void solution(int test){
     while(test--){
-        lint a,b,c,d,e;
-        cin >> a >> b >> c >>d>>e;
-        if(((a+b)<=d && c<=e)||((a+c)<=d && b<=e)||((b+c)<=d && a<=e)){print("YES")}
-        else{print("NO")}
-
+        lint n;
+        cin >> n;
+        string s;
+        cin >> s;
+        lint ans=findCount(s);
+        print(ans)
     }
 }
 int main(){
