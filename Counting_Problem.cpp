@@ -12,28 +12,19 @@ using namespace std;
 #define lintmax LLONG_MAX
 #define lintmin LLONG_MIN
 #define mp(x,y) make_pair(x,y)
-lint solveFunction(string s){
-    lint n=s.size();
-    bool hasIndian=false;bool hasForegin=false;
-    forloop(0,n){
-        if(s[i]=='I'){hasIndian=true;break;}
-        if(s[i]=='Y'){hasForegin=true;break;}
-    }
-    if(hasIndian==true){return 1;}
-    if(hasForegin==true){return 2;}
-    else{
-        return 0;
-    }
+bool solveFunction(vector<lint>&arr){
+    lint odd=0;
+    forloop(0,arr.size()){if(arr[i]%2==1){odd++;}}
+    if(odd%2==0 && odd!=0){return true;}else{return false;}
 }
 void solution(int test){
     while(test--){
-        lint n;cin >> n;
-        string s;cin>>s;
-        lint ans=solveFunction(s);
-        if(ans==1){print("INDIAN")}
-        else if(ans==2){print("NOT INDIAN")}
-        else{print("NOT SURE")}
-
+        lint n;
+        cin >> n;
+        vector<lint>arr;
+        forloop(0,n){lint x;cin >> x;arr.push_back(x);}
+        bool ans = solveFunction(arr);
+        if(ans==true){print("YES")}else{print("NO")}
     }
 }
 int main(){
